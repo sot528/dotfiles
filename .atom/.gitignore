@@ -1,0 +1,13 @@
+storage
+compile-cache
+dev
+.npm
+.node-gyp
+projects.cson
+
+# Add
+.apm
+local-history
+packages
+contributors.txt
+blob-store

@@ -1,0 +1,32 @@
+"*":
+  "atom-beautify":
+    _analyticsUserId: "5503a6fe-5a47-4800-8be5-5fe08298d862"
+  "autoclose-html": {}
+  core:
+    audioBeep: false
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "symbols-view"
+      "japanese-wrap"
+    ]
+    themes: [
+      "one-dark-ui"
+      "one-dark-syntax"
+    ]
+  editor:
+    fontSize: 15
+    invisibles: {}
+    showInvisibles: true
+    tabLength: 4
+    zoomFontWhenCtrlScrolling: true
+  "exception-reporting":
+    userId: "e66b8690-7144-683d-975f-217f48371ad9"
+  "japanese-wrap":
+    characterWidth: {}
+  "markdown-preview": {}
+  "one-dark-ui": {}
+  welcome:
+    showOnStartup: false
+".confluence.html.text":
+  editor:
+    tabLength: 4
