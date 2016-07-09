@@ -10,19 +10,271 @@
 
 <!--suppress XmlUnboundNsPrefix -->
 <root>
-    <appdef>
-        <appname>Chrome</appname>
-        <equal>com.google.Chrome</equal>
-    </appdef>
+    <!-- 矢印キー 上下左右 -->
+    <!-- Vi Mode オプションを有効化することで対応 -->
+
+    <!-- CapsLockをCtrl - PCKeyboardHackで対応 -->
+
     <item>
-        <name>Chrome</name>
-        <only>Chrome</only>
-        <identifier>chrome</identifier>
+        <name>「;」を「ENTER」</name>
+        <identifier>comma2enter</identifier>
         <autogen>--KeyToKey--
-            KeyCode::K, ModifierFlag::CONTROL_L,
-            KeyCode::F, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
+            KeyCode::SEMICOLON, ModifierFlag::COMMAND_L,
+            KeyCode::RETURN
         </autogen>
     </item>
+    <item>
+        <name>「o」を「BackSpace」</name>
+        <identifier>o2backspace</identifier>
+        <autogen>--KeyToKey--
+            KeyCode::O, ModifierFlag::COMMAND_L,
+            KeyCode::DELETE
+        </autogen>
+    </item>
+    <item>
+        <name>「.」を「Forward Delete」</name>
+        <identifier>dot2fdel</identifier>
+        <autogen>--KeyToKey--
+            KeyCode::DOT, ModifierFlag::COMMAND_L,
+            KeyCode::FORWARD_DELETE
+        </autogen>
+    </item>
+
+    <item>
+        <name>「q」を「かな」</name>
+        <identifier>q2kana</identifier>
+        <autogen>--KeyToKey--
+            KeyCode::Q, ModifierFlag::COMMAND_L,
+            KeyCode::SPACE, ModifierFlag::COMMAND_L
+        </autogen>
+    </item>
+
+    <item>
+        <name>a,s,d,fのカーソル移動</name>
+        <identifier>asdf</identifier>
+        <not>Jetbrains</not>
+        <autogen>--KeyToKey--
+            KeyCode::A, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_UP, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::F, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::A, ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::F, ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::J, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_UP, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::D, ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::S, ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L
+        </autogen>
+    </item>
+
+
+    <item>
+        <name>「pageup」と「pagedown」</name>
+        <identifier>pageupdown</identifier>
+        <autogen>--KeyToKey--
+            KeyCode::U, ModifierFlag::COMMAND_L,
+            KeyCode::PAGEUP
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::M, ModifierFlag::COMMAND_L,
+            KeyCode::PAGEDOWN
+        </autogen>
+    </item>
+
+
+    <item>
+        <name>「Ctrl＋F４」</name>
+        <identifier>ctrlf4</identifier>
+        <autogen>--KeyToKey--
+            KeyCode::KEY_4, ModifierFlag::COMMAND_L,
+            KeyCode::Q, ModifierFlag::COMMAND_R
+        </autogen>
+    </item>
+
+
+    <item>
+        <name>コピー、ペースト、やり直し, 取り消しの取り消し</name>
+        <identifier>copy_and_others</identifier>
+        <not>Jetbrains</not>
+        <autogen>--KeyToKey--
+            KeyCode::C, ModifierFlag::CONTROL_L,
+            KeyCode::C, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::Z, ModifierFlag::CONTROL_L,
+            KeyCode::Z, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::X, ModifierFlag::CONTROL_L,
+            KeyCode::X, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::V, ModifierFlag::CONTROL_L,
+            KeyCode::V, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::S, ModifierFlag::CONTROL_L,
+            KeyCode::S, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::T, ModifierFlag::CONTROL_L,
+            KeyCode::T, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::F, ModifierFlag::CONTROL_L,
+            KeyCode::F, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::W, ModifierFlag::CONTROL_L,
+            KeyCode::W, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::A, ModifierFlag::CONTROL_L,
+            KeyCode::A, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::L, ModifierFlag::CONTROL_L,
+            KeyCode::L, ModifierFlag::COMMAND_R
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::Y, ModifierFlag::CONTROL_L,
+            KeyCode::Z, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_L
+        </autogen>
+    </item>
+
+    <item>
+        <name>FunctionKeys</name>
+        <identifier>FunctionKeys</identifier>
+        <autogen>--KeyToKey--
+            KeyCode::KEY_1, ModifierFlag::COMMAND_L,
+            KeyCode::F1, ModifierFlag::FN
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::KEY_2, ModifierFlag::COMMAND_L,
+            KeyCode::F2, ModifierFlag::FN
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::KEY_3, ModifierFlag::COMMAND_L,
+            KeyCode::F3, ModifierFlag::FN
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::KEY_5, ModifierFlag::COMMAND_L,
+            KeyCode::F5, ModifierFlag::FN
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::KEY_6, ModifierFlag::COMMAND_L,
+            KeyCode::F6, ModifierFlag::FN
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::KEY_7, ModifierFlag::COMMAND_L,
+            KeyCode::F7, ModifierFlag::FN
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::KEY_8, ModifierFlag::COMMAND_L,
+            KeyCode::F8, ModifierFlag::FN
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::KEY_9, ModifierFlag::COMMAND_L,
+            KeyCode::F9, ModifierFlag::FN
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::KEY_0, ModifierFlag::COMMAND_L,
+            KeyCode::F10, ModifierFlag::FN
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::P, ModifierFlag::COMMAND_L,
+            KeyCode::F11, ModifierFlag::FN
+        </autogen>
+    </item>
+
+    <item>
+        <name>タブの切り替え</name>
+        <identifier>tabs</identifier>
+        <not>Atom</not>
+        <autogen>--KeyToKey--
+            KeyCode::TAB, ModifierFlag::CONTROL_L,
+            KeyCode::TAB, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::I, ModifierFlag::COMMAND_L,
+            KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>--KeyToKey--
+            PointingButton::BUTTON5,
+            KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::COMMA, ModifierFlag::COMMAND_L,
+            KeyCode::TAB, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>--KeyToKey--
+            PointingButton::BUTTON4,
+            KeyCode::TAB, ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+
+    <!-- 画面の切り替え -->
+    <item>
+        <name>画面の切り替え</name>
+        <identifier>screens</identifier>
+        <autogen>--KeyToKey--
+            KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>--KeyToKey--
+            KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+
+    <item>
+        <name>「Ctrl＋1」でスクリーンショット</name>
+        <identifier>ctrl12screenshot</identifier>
+        <autogen>--KeyToKey--
+            KeyCode::KEY_1, ModifierFlag::CONTROL_L,
+            KeyCode::KEY_4, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_L
+        </autogen>
+    </item>
+
+    <item>
+        <name>「Fn＋CapsLock」でCapsLock</name>
+        <identifier>fncapslock</identifier>
+        <autogen>--KeyToKey--
+            KeyCode::CONTROL_L, ModifierFlag::FN,
+            KeyCode::CAPSLOCK
+        </autogen>
+    </item>
+
+    <item>
+        <name>日本語キーボードの「英数」をCOMMAND_Lに</name>
+        <identifier>eisuu2COMMAND_L</identifier>
+        <autogen>--KeyToKey--
+            KeyCode::JIS_EISUU,
+            KeyCode::COMMAND_L
+        </autogen>
+    </item>
+
+    <!-- For specific app. -->
 
     <appdef>
         <appname>Terminal</appname>
@@ -33,23 +285,23 @@
         <only>Terminal</only>
         <identifier>terminal</identifier>
         <autogen>--KeyToKey--
-            KeyCode::I, ModifierFlag::COMMAND_R,
-            KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_L
+            KeyCode::I, ModifierFlag::COMMAND_L,
+            KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
         </autogen>
         <autogen>--KeyToKey--
             KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L,
-            KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_L
+            KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::COMMA, ModifierFlag::COMMAND_R,
-            KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_L
+            KeyCode::COMMA, ModifierFlag::COMMAND_L,
+            KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
         </autogen>
         <autogen>--KeyToKey--
             KeyCode::TAB, ModifierFlag::CONTROL_L,
-            KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_L
+            KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::F, ModifierFlag::COMMAND_R,
+            KeyCode::F, ModifierFlag::COMMAND_L,
             KeyCode::E, ModifierFlag::CONTROL_R
         </autogen>
         <autogen>--KeyToKey--
@@ -57,12 +309,26 @@
             KeyCode::A, ModifierFlag::CONTROL_R
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::A, ModifierFlag::COMMAND_R,
+            KeyCode::A, ModifierFlag::COMMAND_L,
             KeyCode::A, ModifierFlag::CONTROL_R
         </autogen>
         <autogen>--KeyToKey--
             KeyCode::D, ModifierFlag::CONTROL_L,
             KeyCode::C, ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+
+    <appdef>
+        <appname>Chrome</appname>
+        <equal>com.google.Chrome</equal>
+    </appdef>
+    <item>
+        <name>Chrome</name>
+        <only>Chrome</only>
+        <identifier>chrome</identifier>
+        <autogen>--KeyToKey--
+            KeyCode::K, ModifierFlag::CONTROL_L,
+            KeyCode::F, ModifierFlag::COMMAND_R | ModifierFlag::OPTION_L
         </autogen>
     </item>
 
@@ -78,32 +344,32 @@
         <only>Jetbrains</only>
         <identifier>jetbrains_ide_shortcuts</identifier>
         <autogen>--KeyToKey--
-            KeyCode::Z, ModifierFlag::COMMAND_R,
+            KeyCode::Z, ModifierFlag::COMMAND_L,
             KeyCode::Z, ModifierFlag::CONTROL_L
         </autogen>
         <!-- a,s,d,fのカーソル移動 -->
         <autogen>--KeyToKey--
-            KeyCode::A, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R,
+            KeyCode::A, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
             KeyCode::HOME, ModifierFlag::FN | ModifierFlag::CONTROL_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::F, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R,
+            KeyCode::F, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
             KeyCode::END, ModifierFlag::FN | ModifierFlag::CONTROL_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::A, ModifierFlag::COMMAND_R,
+            KeyCode::A, ModifierFlag::COMMAND_L,
             KeyCode::HOME, ModifierFlag::FN
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::F, ModifierFlag::COMMAND_R,
+            KeyCode::F, ModifierFlag::COMMAND_L,
             KeyCode::END, ModifierFlag::FN
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::D, ModifierFlag::COMMAND_R,
+            KeyCode::D, ModifierFlag::COMMAND_L,
             KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::S, ModifierFlag::COMMAND_R,
+            KeyCode::S, ModifierFlag::COMMAND_L,
             KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L
         </autogen>
     </item>
@@ -117,11 +383,11 @@
         <only>Atom</only>
         <identifier>atom</identifier>
         <autogen>--KeyToKey--
-            KeyCode::COMMA, ModifierFlag::COMMAND_R,
+            KeyCode::COMMA, ModifierFlag::COMMAND_L,
             KeyCode::PAGEDOWN, ModifierFlag::CONTROL_L | ModifierFlag::FN
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::I, ModifierFlag::COMMAND_R,
+            KeyCode::I, ModifierFlag::COMMAND_L,
             KeyCode::PAGEUP, ModifierFlag::CONTROL_L | ModifierFlag::FN
         </autogen>
     </item>
@@ -136,27 +402,27 @@
         <identifier>excel</identifier>
         <!-- a,s,d,fのカーソル移動 -->
         <autogen>--KeyToKey--
-            KeyCode::A, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R,
+            KeyCode::A, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
             KeyCode::HOME, ModifierFlag::FN | ModifierFlag::CONTROL_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::F, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R,
+            KeyCode::F, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
             KeyCode::END, ModifierFlag::FN | ModifierFlag::CONTROL_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::A, ModifierFlag::COMMAND_R,
+            KeyCode::A, ModifierFlag::COMMAND_L,
             KeyCode::HOME, ModifierFlag::FN
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::F, ModifierFlag::COMMAND_R,
+            KeyCode::F, ModifierFlag::COMMAND_L,
             KeyCode::END, ModifierFlag::FN
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::D, ModifierFlag::COMMAND_R,
+            KeyCode::D, ModifierFlag::COMMAND_L,
             KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::S, ModifierFlag::COMMAND_R,
+            KeyCode::S, ModifierFlag::COMMAND_L,
             KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L
         </autogen>
         <!-- セルの編集 -->
@@ -165,13 +431,13 @@
             KeyCode::U, ModifierFlag::CONTROL_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::KEY_2, ModifierFlag::COMMAND_R,
+            KeyCode::KEY_2, ModifierFlag::COMMAND_L,
             KeyCode::U, ModifierFlag::CONTROL_L
         </autogen>
         <!-- セル内改行 -->
         <autogen>--KeyToKey--
             KeyCode::RETURN, ModifierFlag::OPTION_L,
-            KeyCode::RETURN, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_R
+            KeyCode::RETURN, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L
         </autogen>
     </item>
 
@@ -185,311 +451,124 @@
         <identifier>outlook</identifier>
         <!-- メール、予定表切り替え -->
         <autogen>--KeyToKey--
-            KeyCode::KEY_1, ModifierFlag::COMMAND_R,
-            KeyCode::KEY_1, ModifierFlag::COMMAND_R
+            KeyCode::KEY_1, ModifierFlag::COMMAND_L,
+            KeyCode::KEY_1, ModifierFlag::COMMAND_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::KEY_2, ModifierFlag::COMMAND_R,
-            KeyCode::KEY_2, ModifierFlag::COMMAND_R
+            KeyCode::KEY_2, ModifierFlag::COMMAND_L,
+            KeyCode::KEY_2, ModifierFlag::COMMAND_L
         </autogen>
         <!-- 予定表 -->
         <autogen>--KeyToKey--
-            KeyCode::T, ModifierFlag::COMMAND_R,
-            KeyCode::T, ModifierFlag::COMMAND_R
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::D, ModifierFlag::COMMAND_R,
-            KeyCode::KEY_1, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::M, ModifierFlag::COMMAND_R,
-            KeyCode::KEY_4, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::W, ModifierFlag::COMMAND_R,
-            KeyCode::KEY_3, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R
-        </autogen>
-    </item>
-
-    <!-- 矢印キー 上下左右 -->
-    <!-- Vi Mode オプションを有効化することで対応 -->
-
-    <!-- CapsLockをCtrl - PCKeyboardHackで対応 -->
-
-    <item>
-        <name>左commandを右command</name>
-        <identifier>cmdleft2cmdright</identifier>
-        <autogen>--KeyToKey--
-            KeyCode::COMMAND_L, KeyCode::COMMAND_R
-        </autogen>
-    </item>
-
-    <item>
-        <name>「;」を「ENTER」</name>
-        <identifier>comma2enter</identifier>
-        <autogen>--KeyToKey--
-            KeyCode::SEMICOLON, ModifierFlag::COMMAND_R,
-            KeyCode::RETURN
-        </autogen>
-    </item>
-    <item>
-        <name>「o」を「BackSpace」</name>
-        <identifier>o2backspace</identifier>
-        <autogen>--KeyToKey--
-            KeyCode::O, ModifierFlag::COMMAND_R,
-            KeyCode::DELETE
-        </autogen>
-    </item>
-    <item>
-        <name>「.」を「Forward Delete」</name>
-        <identifier>dot2fdel</identifier>
-        <autogen>--KeyToKey--
-            KeyCode::DOT, ModifierFlag::COMMAND_R,
-            KeyCode::FORWARD_DELETE
-        </autogen>
-    </item>
-
-    <item>
-        <name>「q」を「かな」</name>
-        <identifier>q2kana</identifier>
-        <autogen>--KeyToKey--
-            KeyCode::Q, ModifierFlag::COMMAND_R,
-            KeyCode::SPACE, ModifierFlag::COMMAND_R
-        </autogen>
-    </item>
-
-    <item>
-        <name>a,s,d,fのカーソル移動</name>
-        <identifier>asdf</identifier>
-        <not>Jetbrains</not>
-        <autogen>--KeyToKey--
-            KeyCode::A, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::F, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::A, ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::F, ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::J, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::D, ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::S, ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L
-        </autogen>
-    </item>
-
-
-    <item>
-        <name>「pageup」と「pagedown」</name>
-        <identifier>pageupdown</identifier>
-        <autogen>--KeyToKey--
-            KeyCode::U, ModifierFlag::COMMAND_R,
-            KeyCode::PAGEUP
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::M, ModifierFlag::COMMAND_R,
-            KeyCode::PAGEDOWN
-        </autogen>
-    </item>
-
-
-    <item>
-        <name>「Ctrl＋F４」</name>
-        <identifier>ctrlf4</identifier>
-        <autogen>--KeyToKey--
-            KeyCode::KEY_4, ModifierFlag::COMMAND_R,
-            KeyCode::Q, ModifierFlag::COMMAND_L
-        </autogen>
-    </item>
-
-
-    <item>
-        <name>コピー、ペースト、やり直し, 取り消しの取り消し</name>
-        <identifier>copy_and_others</identifier>
-        <not>Jetbrains</not>
-        <autogen>--KeyToKey--
-            KeyCode::C, ModifierFlag::CONTROL_L,
-            KeyCode::C, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::Z, ModifierFlag::CONTROL_L,
-            KeyCode::Z, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::X, ModifierFlag::CONTROL_L,
-            KeyCode::X, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::V, ModifierFlag::CONTROL_L,
-            KeyCode::V, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::S, ModifierFlag::CONTROL_L,
-            KeyCode::S, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::T, ModifierFlag::CONTROL_L,
+            KeyCode::T, ModifierFlag::COMMAND_L,
             KeyCode::T, ModifierFlag::COMMAND_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::F, ModifierFlag::CONTROL_L,
-            KeyCode::F, ModifierFlag::COMMAND_L
+            KeyCode::D, ModifierFlag::COMMAND_L,
+            KeyCode::KEY_1, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::W, ModifierFlag::CONTROL_L,
-            KeyCode::W, ModifierFlag::COMMAND_L
+            KeyCode::M, ModifierFlag::COMMAND_L,
+            KeyCode::KEY_4, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L
         </autogen>
         <autogen>--KeyToKey--
-            KeyCode::A, ModifierFlag::CONTROL_L,
-            KeyCode::A, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::L, ModifierFlag::CONTROL_L,
-            KeyCode::L, ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::Y, ModifierFlag::CONTROL_L,
-            KeyCode::Z, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+            KeyCode::W, ModifierFlag::COMMAND_L,
+            KeyCode::KEY_3, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L
         </autogen>
     </item>
 
     <item>
-        <name>FunctionKeys</name>
-        <identifier>FunctionKeys</identifier>
-        <autogen>--KeyToKey--
-            KeyCode::KEY_1, ModifierFlag::COMMAND_R,
-            KeyCode::F1, ModifierFlag::FN
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::KEY_2, ModifierFlag::COMMAND_R,
-            KeyCode::F2, ModifierFlag::FN
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::KEY_3, ModifierFlag::COMMAND_R,
-            KeyCode::F3, ModifierFlag::FN
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::KEY_5, ModifierFlag::COMMAND_R,
-            KeyCode::F5, ModifierFlag::FN
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::KEY_6, ModifierFlag::COMMAND_R,
-            KeyCode::F6, ModifierFlag::FN
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::KEY_7, ModifierFlag::COMMAND_R,
-            KeyCode::F7, ModifierFlag::FN
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::KEY_8, ModifierFlag::COMMAND_R,
-            KeyCode::F8, ModifierFlag::FN
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::KEY_9, ModifierFlag::COMMAND_R,
-            KeyCode::F9, ModifierFlag::FN
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::KEY_0, ModifierFlag::COMMAND_R,
-            KeyCode::F10, ModifierFlag::FN
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::P, ModifierFlag::COMMAND_R,
-            KeyCode::F11, ModifierFlag::FN
-        </autogen>
-    </item>
-
-    <item>
-        <name>タブの切り替え</name>
-        <identifier>tabs</identifier>
-        <not>Atom</not>
-        <autogen>--KeyToKey--
-            KeyCode::TAB, ModifierFlag::CONTROL_L,
-            KeyCode::TAB, ModifierFlag::CONTROL_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::I, ModifierFlag::COMMAND_R,
-            KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>--KeyToKey--
-            PointingButton::BUTTON5,
-            KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::COMMA, ModifierFlag::COMMAND_R,
-            KeyCode::TAB, ModifierFlag::CONTROL_L
-        </autogen>
-        <autogen>--KeyToKey--
-            PointingButton::BUTTON4,
-            KeyCode::TAB, ModifierFlag::CONTROL_L
-        </autogen>
-    </item>
-
-    <!-- 画面の切り替え -->
-    <item>
-        <name>画面の切り替え</name>
-        <identifier>screens</identifier>
-        <autogen>--KeyToKey--
-            KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L
-        </autogen>
-        <autogen>--KeyToKey--
-            KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L
-        </autogen>
-    </item>
-
-    <item>
-        <name>「Ctrl＋1」でスクリーンショット</name>
-        <identifier>ctrl12screenshot</identifier>
-        <autogen>--KeyToKey--
-            KeyCode::KEY_1, ModifierFlag::CONTROL_L,
-            KeyCode::KEY_4, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
-        </autogen>
-    </item>
-
-    <item>
-        <name>「Fn＋CapsLock」でCapsLock</name>
-        <identifier>fncapslock</identifier>
-        <autogen>--KeyToKey--
-            KeyCode::CONTROL_L, ModifierFlag::FN,
-            KeyCode::CAPSLOCK
-        </autogen>
-    </item>
-
-    <item>
-        <name>日本語キーボードの「英数」をCOMMAND_Rに</name>
-        <identifier>eisuu2command_r</identifier>
-        <autogen>--KeyToKey--
-            KeyCode::JIS_EISUU,
-            KeyCode::COMMAND_R
-        </autogen>
-    </item>
-
-    <item>
-        <name>DoublePane用</name>
+        <name>DoublePane</name>
         <identifier>doublepane</identifier>
         <autogen>--KeyToKey--
-            KeyCode::E, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R,
+            KeyCode::E, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
         </autogen>
     </item>
 
+    <!-- Launch app / Open URL / Execute shell  -->
+    <vkopenurldef>
+        <name>KeyCode::VK_OPEN_URL_APP_Terminal</name>
+        <url type="file">/Applications/Utilities/Terminal.app</url>
+    </vkopenurldef>
+    <item>
+        <name>Terminalを開く</name>
+        <identifier>open_app_terminal</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::T, ModifierFlag::SHIFT_R,
+            KeyCode::VK_OPEN_URL_APP_Terminal,
+        </autogen>
+    </item>
+
+
+    <vkopenurldef>
+        <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
+        <url type="file">/Applications/Google Chrome.app</url>
+    </vkopenurldef>
+    <item>
+        <name>Chromeを開く</name>
+        <identifier>open_app_chrome</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::C, ModifierFlag::SHIFT_R,
+            KeyCode::VK_OPEN_URL_APP_Chrome,
+        </autogen>
+    </item>
+
+    <vkopenurldef>
+        <name>KeyCode::VK_OPEN_URL_APP_IntelliJ</name>
+        <url type="file">/Applications/IntelliJ IDEA 15.app</url>
+    </vkopenurldef>
+    <item>
+        <name>IntelliJを開く</name>
+        <identifier>open_app_IntelliJ</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::E, ModifierFlag::SHIFT_R,
+            KeyCode::VK_OPEN_URL_APP_IntelliJ,
+        </autogen>
+    </item>
+
+    <vkopenurldef>
+        <name>KeyCode::VK_OPEN_URL_APP_Slack</name>
+        <url type="file">/Applications/Slack.app</url>
+    </vkopenurldef>
+    <item>
+        <name>Slackを開く</name>
+        <identifier>open_app_slack</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::S, ModifierFlag::SHIFT_R,
+            KeyCode::VK_OPEN_URL_APP_Slack,
+        </autogen>
+    </item>
+
+    <vkopenurldef>
+        <name>KeyCode::VK_OPEN_URL_APP_Atom</name>
+        <url type="file">/Applications/Atom.app</url>
+    </vkopenurldef>
+    <item>
+        <name>Atomを開く</name>
+        <identifier>open_app_atom</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::A, ModifierFlag::SHIFT_R,
+            KeyCode::VK_OPEN_URL_APP_Atom,
+        </autogen>
+    </item>
+
+    <vkopenurldef>
+        <name>KeyCode::VK_OPEN_URL_APP_Finder</name>
+        <url type="file">/System/Library/CoreServices/Finder.app</url>
+    </vkopenurldef>
+    <item>
+        <name>Finderを開く</name>
+        <identifier>open_app_finder</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::F, ModifierFlag::SHIFT_R,
+            KeyCode::VK_OPEN_URL_APP_Finder,
+        </autogen>
+    </item>
 </root>
