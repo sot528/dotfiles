@@ -14,7 +14,6 @@
       "one-dark-syntax"
     ]
   editor:
-    fontSize: 15
     invisibles: {}
     showInvisibles: true
     tabLength: 4
