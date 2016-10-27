@@ -14,6 +14,7 @@
     <appdef>
         <appname>Terminal</appname>
         <equal>com.apple.Terminal</equal>
+        <equal>com.googlecode.iterm2</equal>
     </appdef>
     <item>
         <name>Terminal</name>
@@ -224,7 +225,7 @@
     <!-- Launch app / Open URL / Execute shell  -->
     <vkopenurldef>
         <name>KeyCode::VK_OPEN_URL_APP_Terminal</name>
-        <url type="file">/Applications/Utilities/Terminal.app</url>
+        <url type="file">/Applications/iTerm.app</url>
     </vkopenurldef>
     <item>
         <name>Terminalを開く</name>
@@ -318,6 +319,20 @@
             __KeyToKey__
             KeyCode::O, ModifierFlag::SHIFT_R,
             KeyCode::VK_OPEN_URL_APP_Outlook,
+        </autogen>
+    </item>
+
+    <vkopenurldef>
+        <name>KeyCode::VK_OPEN_URL_APP_Firefox</name>
+        <url type="file">/Applications/Firefox.app</url>
+    </vkopenurldef>
+    <item>
+        <name>Firefoxを開く</name>
+        <identifier>open_app_Firefox</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::M, ModifierFlag::SHIFT_R,
+            KeyCode::VK_OPEN_URL_APP_Firefox,
         </autogen>
     </item>
 
